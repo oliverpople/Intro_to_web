@@ -1,4 +1,11 @@
-<h1> 'Hi name is <%=["Montague", "Mary", "Your mum"].sample %>'</h1>
-<div style ='border: 20px dashed red'>
-<img src= 'http://i.imgur.com/w39N5.png'>
+  <h1> 'Hi name is <%= @name %>'</h1>
+    <div style='border: 20px dashed red'>
+  <img src='http://i.imgur.com/w39N5.png'>
 </div>
+
+<% if !@name %>
+  <form method='post' action='/named-cat'>
+  <input type=text name=name></input>
+  <input type=submit value=Submit></input>
+  </form>
+<% end %>
